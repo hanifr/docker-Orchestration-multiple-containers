@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+
+  xmrmonitor:
+    image: username/app
+    restart: always
+    ports:
+      - "2000:1880"  
+    environment:
+#      - FLOWS=/data/flows.json
+      VIRTUAL_HOST: domain3
+#      VIRTUAL_PORT: 1880
+      LETSENCRYPT_HOST: domain3
+      LETSENCRYPT_EMAIL: email
+networks:
+ default:
+  external:
+   name: nginxproxy_default
