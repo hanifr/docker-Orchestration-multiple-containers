@@ -1,0 +1,46 @@
+version: '2'
+
+services:
+
+  nodered:
+    image: username/app
+    restart: always
+    ports:
+      - "1880:1880"  
+    environment:
+#      - FLOWS=/data/flows.json
+      VIRTUAL_HOST: domain1
+#      VIRTUAL_PORT: 1880
+      LETSENCRYPT_HOST: domain1
+      LETSENCRYPT_EMAIL: email
+
+  graphene:
+    image: aneh2killa/grafanax
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      VIRTUAL_HOST: domain2
+#      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: domain2
+      LETSENCRYPT_EMAIL: email
+
+  mysql:
+    image: mariadb
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: strongpassword
+      MYSQL_DATABASE: data1
+      MYSQL_USER: username
+      MYSQL_PASSWORD: strongpassword
+    ports:
+      - "3306:3306"
+volumes:
+  db_data:
+
+networks:
+ default:
+  external:
+   name: nginxproxy_default
