@@ -5,7 +5,7 @@ How to use this tool
 
 $ su - username
 
-$ git clone docker-Orchestration-multiple-containers
+$ git clone https://github.com/hanifr/docker-Orchestration-multiple-containers.git
 
 $ cd nginxproxy
 
