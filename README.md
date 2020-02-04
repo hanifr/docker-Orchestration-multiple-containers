@@ -15,4 +15,16 @@ $ cd
 
 $ docker network create nginx-proxy
 
-$ cd 
+$ cd node-red
+
+$ sudo nano docker-compose.yml
+
+change the domain address and related details
+
+$ docker-compose up -d
+
+$ cd grafana-mysql
+
+change the domain address and related details
+
+$ docker-compose up -d
