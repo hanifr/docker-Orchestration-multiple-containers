@@ -5,12 +5,14 @@ How to use this tool
 
 $ su - username
 
-$ sudo mkdir nginxproxy && cd nginxproxy
+$ git clone docker-Orchestration-multiple-containers
 
-$ git clone docker-compose.yml
+$ cd nginxproxy
 
 $ docker-compose up -d
 
 $ cd
 
 $ docker network create nginx-proxy
+
+$ cd 
