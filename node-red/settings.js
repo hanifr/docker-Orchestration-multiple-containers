@@ -123,8 +123,8 @@ module.exports = {
     adminAuth: {
         type: "credentials",
         users: [{
-            username: "username",
-            password: "hashfunction-here",
+            username: "digitalman",
+            password: "$2a$08$.4Yc/L0VJbxAsMZijRyEz.IX3.wKxqIQURH32M9ertXaP2UgIFoRi",
             permissions: "*"
         }]
     },
