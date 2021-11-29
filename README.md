@@ -28,3 +28,6 @@ $ cd grafana-mysql
 change the domain address and related details
 
 $ docker-compose up -d
+
+
+Further reading on proxy setup: https://hub.docker.com/r/jwilder/nginx-proxy
