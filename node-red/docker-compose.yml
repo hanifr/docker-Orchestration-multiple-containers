@@ -2,8 +2,8 @@ version: '2'
 
 services:
 
-  xmrmonitor:
-    image: username/app
+  nr:
+    image: nodered/node-red
     restart: always
     ports:
       - "2000:1880"  
