@@ -9,6 +9,13 @@ $ git clone https://github.com/hanifr/docker-Orchestration-multiple-containers.g
 
 $ cd nginxproxy
 
+Check whether docker-compose is available
+$ docker-compose --version
+
+If the compose is not available, proceed with installation
+
+$ sudo apt  install docker-compose
+
 $ docker-compose up -d
 
 $ cd
